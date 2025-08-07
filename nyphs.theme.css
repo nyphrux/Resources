@@ -1,0 +1,148 @@
+/**
+ * @name Nyph's Theme~
+ * @description Build using refact0r/midnight-discord
+ * @author refact0r & nyph
+ * @version 2.1.1
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/themes/midnight.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+
+/* --- Body and layout settings --- */
+body {
+    --font: 'Fredoka One', sans-serif;
+    --code-font: 'Fredoka One', monospace;
+    font-weight: 400;
+
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 1px;
+
+    --animations: on;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+    --border-hover-transition: 0.2s ease;
+
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    --custom-window-controls: on;
+    --window-control-size: 14px;
+
+    --custom-dms-icon: off;
+    --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
+    --dms-icon-svg-size: 100%;
+    --dms-icon-color-before: var(--icon-secondary);
+    --dms-icon-color-after: var(--white);
+    --custom-dms-background: off;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color: linear-gradient(70deg, var(--purple-2), var(--purple-3), var(--purple-4));
+
+    --background-image: off;
+    --background-image-url: url('');
+
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    --custom-chatbar: off;
+    --chatbar-height: 47px;
+    --chatbar-padding: 8px;
+
+    --small-user-panel: off;
+}
+
+/* --- Core colors and text --- */
+:root {
+    --colors: on;
+
+    --text-0: var(--bg-4);
+    --text-1: hsl(275, 45%, 95%);
+    --text-2: hsl(275, 25%, 70%);
+    --text-3: hsl(275, 20%, 60%);
+    --text-4: hsl(275, 15%, 40%);
+    --text-5: hsl(275, 15%, 25%);
+
+    /* Background shades: rich purples */
+    --bg-1: oklch(18% 0.25 310);
+    --bg-2: oklch(15% 0.20 315);
+    --bg-3: oklch(12% 0.15 320);
+    --bg-4: oklch(10% 0.10 325);
+
+    /* UI state colors */
+    --hover: hsla(275, 19%, 40%, 0.1);
+    --active: hsla(275, 19%, 40%, 0.2);
+    --active-2: hsla(275, 19%, 40%, 0.3);
+    --message-hover: hsla(0, 0%, 48%, 0.1);
+
+    /* Accent colors - purples */
+    --accent-1: var(--purple-1);
+    --accent-2: var(--purple-2);
+    --accent-3: var(--purple-3);
+    --accent-4: var(--purple-4);
+    --accent-5: var(--purple-5);
+    --accent-new: var(--accent-2);
+
+    /* Mention and reply highlights */
+    --mention: linear-gradient(to left, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent);
+    --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent);
+    --reply: linear-gradient(to left, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent);
+    --reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent);
+
+    /* User status colors */
+    --online: #00b7ff;
+    --idle: #fffb00;
+    --dnd: #ff0000;
+    --streaming: #7b00ac;
+    --offline: #ffffff;
+
+    /* Borders and outlines */
+    --border-light: rgba(255, 255, 255, 0.3);
+    --border: rgba(255, 255, 255, 0.45);
+    --border-hover: rgba(255, 255, 255, 0.623);
+    --button-border: rgba(255, 255, 255, 0.15);
+
+    /* Red shades */
+    --red-1: oklch(75% 0.12 0);
+    --red-2: oklch(70% 0.12 0);
+    --red-3: oklch(65% 0.12 0);
+    --red-4: oklch(60% 0.12 0);
+    --red-5: oklch(55% 0.12 0);
+
+    /* Green shades */
+    --green-1: oklch(75% 0.11 170);
+    --green-2: oklch(70% 0.11 170);
+    --green-3: oklch(65% 0.11 170);
+    --green-4: oklch(60% 0.11 170);
+    --green-5: oklch(55% 0.11 160);
+
+    /* Blue shades */
+    --blue-1: oklch(75% 0.1 275);
+    --blue-2: oklch(70% 0.1 275);
+    --blue-3: oklch(65% 0.1 275);
+    --blue-4: oklch(60% 0.1 275);
+    --blue-5: oklch(55% 0.1 275);
+
+    /* Yellow shades */
+    --yellow-1: oklch(80% 0.11 90);
+    --yellow-2: oklch(75% 0.11 90);
+    --yellow-3: oklch(70% 0.11 90);
+    --yellow-4: oklch(65% 0.11 90);
+    --yellow-5: oklch(60% 0.11 90);
+
+    /* Purple shades */
+    --purple-1: oklch(55% 0.25 310);
+    --purple-2: oklch(45% 0.40 315);
+    --purple-3: oklch(35% 0.35 320);
+    --purple-4: oklch(28% 0.25 325);
+    --purple-5: oklch(22% 0.20 330);
+}
